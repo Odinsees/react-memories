@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { classNames } from "shared/lib/classNames";
 import { AppLink } from "shared/ui/AppLink/AppLink";
+import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
 
 import styles from "./Navbar.module.scss";
 
@@ -17,6 +18,7 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
         </AppLink>
         <AppLink to="/about">About</AppLink>
       </div>
+      <ThemeSwitcher />
     </div>
   );
 };

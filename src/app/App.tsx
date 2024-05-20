@@ -6,18 +6,12 @@ import { Navbar } from "widgets/Navbar";
 
 import "./styles/index.scss";
 
-export enum Theme {
-  LIGHT = "light",
-  DARK = "dark",
-}
-
 export const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <div className={classNames("app", {}, [theme])}>
       <Navbar />
-      <button onClick={toggleTheme}>Toggle theme</button>
       <AppRouter />
     </div>
   );
